@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Ficha de cadastro do colaborador</title>
+</head>
+<body>
+    <div class="Title">
+        <h2>Formulário de Criação de Usuário</h2>
+    </div>
+    <div class="container">
+        <div class="Userform">
+            <form>
+                <label for="nomeCompleto">Nome Completo:</label>
+                <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo" required>
+
+                <label for="CentroDeCusto">Centro de Custo:</label>
+                <select id="centrodecusto" name="CentroDeCusto" required>
+                    <option value="">Selecione o Centro de Custo</option>
+                    <option value="Escritório">Escritório</option>
+                    <option value="Aruana Park">Aruana Park</option>
+                    <option value="Aruana Prime">Aruana Prime</option>
+                    <option value="Santa Lcuia Park">Santa Lucia Park</option>
+                   
+                </select>
+
+                <label for="Setor">Setor:</label>
+                <input type="text" id="setor" name="Setor" required>
+
+                <div class="button-group">
+                    <button type="button" onclick="salvarDados()">Salvar </button>
+                    <button type="button" onclick="gerarPDF()">Gerar PDF</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="information">
+            <h3>Dados do Novo Colaborador:</h3>
+            <p>Nome Completo: <span id="nomeCompletoDisplay"></span></p>
+            <p>Centro de custo: <span id="centrodecustoDisplay"></span></p>
+            <p>Setor: <span id="setorDisplay"></span></p>
+            <p>Iniciais: <span id="iniciais"></span></p>
+            <p>Logon: <span id="logon"></span></p>
+            <p>Senha: <span id="senha"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Data: <span id="dataAtual"></span></p>
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
